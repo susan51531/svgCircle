@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Svg circle</title>
+    <style>
+        body {
+            color: #fff;
+            font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+        }
+        #holder {
+            width: 700px;
+            height: 700px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -350px 0 0 -350px;
+        }
+    </style>
+    <script src="jquery-1.11.2.min.js"></script>
+    <script src="raphael.js"></script>
+    <script src="jquery.svgCircle.js"></script>
+    <script>
+    $(function(){
+        $('#holder').svgCircle({
+            radius: 100,
+            cx: 350,
+            cy: 350,
+            autoStart: true,
+            infinite: true,
+            callback: function(){
+                console.log('complete');
+            }
+        });
+    })
+    </script>
+</head>
+<body>
+    <div id="holder"></div>
+</body>
+</html>
