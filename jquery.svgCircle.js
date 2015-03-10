@@ -89,10 +89,13 @@
                     clearInterval(timeId);
                     timeId = null;
                 },
-                reset: function(){
+                reset: function(startNow){
                     angle = config.startAngle;
-                    if(!timeId) {
+                    if(!timeId && startNow) {
                         timeId = setInterval(_update,config.interval);
+                    } else if(timeId && !startNow) {
+                        clearInterval(timeId);
+                        timeId = null;
                     }
                 },
                 start: function(){
