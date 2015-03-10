@@ -100,7 +100,7 @@
                 },
                 start: function(){
                     if(!timeId) {
-                        timeId = timeId = setInterval(_update,config.interval);
+                        timeId = setInterval(_update,config.interval);
                     }
                 }
             })
